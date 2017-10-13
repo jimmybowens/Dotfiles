@@ -12,4 +12,5 @@ if [ ! -d "$HOME/.vim" ];then
   mkdir -p "$HOME/.vim"
 fi
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 exit 0
