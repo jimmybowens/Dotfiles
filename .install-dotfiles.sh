@@ -8,4 +8,8 @@ for dotfile in $FILES;do
     ln -s "$dotfile" "$HOME" > /dev/null 2>&1
   fi
 done
+if [ ! -d "$HOME/.vim" ];then
+  mkdir -p "$HOME/.vim"
+fi
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 exit 0
