@@ -5,7 +5,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
-Plugin 'itchyny/lightline.vim'
+"Plugin 'itchyny/lightline.vim'
 Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
@@ -32,29 +32,29 @@ set autoindent
 set incsearch
 set hlsearch
 set cindent
-set foldmethod=indent
+"set foldmethod=indent
 set showtabline=2
 
 let mapleader = ","
 let maplocalleader = "\\"
-iabbrev email vincycelebrity@gmail.com
+"iabbrev iemail vincycelebrity@gmail.com
+"iabbrev #i #include
+"iabbrev #d #define
+"iabbrev [ []<esc>i
+"iabbrev ( ()<esc>i
+"iabbrev { {}<esc>i
+
+
 noremap <esc> :noh<esc><cr>
 noremap <esc><esc> :noh<cr><esc>
 noremap <S-Enter> O<esc><cr>
 noremap <CR> o<esc><cr>
-noremap <leader>dn dd<cr>
-noremap <leader>qn :q!<cr>
-noremap <leader>zn :wq<cr>
-noremap <leader>sn :w<cr>
 noremap <leader>ev :vsplit $MYVIMRC<cr>
-noremap <leader>sv :source $MYVIMRC<cr>
-noremap <leader>rv :vertical resize 80<cr>
-noremap <leader>' viw<esc>a'<esc>bi'<esc>lel<cr>
-noremap <leader>'' viw<esc>a"<esc>bi"<esc>lel<cr>
-"noremap <leader>h <C-W>H<cr>
-"noremap <leader>l <C-W>L<cr>
-"noremap <leader>j <C-W>J<cr>
-"noremap <leader>k <C-W>K<cr>
+nmap <leader>v :source $MYVIMRC<cr>
+nmap <leader>r :vertical resize 80<cr>
+nmap <leader>' viw<esc>a'<esc>bi'<esc>lel<cr>
+nmap <leader>'' viw<esc>a"<esc>bi"<esc>lel<cr>
+nmap <leader>< viw<esc>a<<esc>bi><esc>lel<cr>
 nmap <leader>t :enew<cr>
 nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
