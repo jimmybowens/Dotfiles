@@ -37,14 +37,6 @@ set showtabline=2
 
 let mapleader = ","
 let maplocalleader = "\\"
-"iabbrev iemail vincycelebrity@gmail.com
-"iabbrev #i #include
-"iabbrev #d #define
-"iabbrev [ []<esc>i
-"iabbrev ( ()<esc>i
-"iabbrev { {}<esc>i
-
-
 noremap <esc> :noh<esc><cr>
 noremap <esc><esc> :noh<cr><esc>
 noremap <S-Enter> O<esc><cr>
@@ -55,7 +47,7 @@ nmap <leader>r :vertical resize 80<cr>
 nmap <leader>' viw<esc>a'<esc>bi'<esc>lel<cr>
 nmap <leader>'' viw<esc>a"<esc>bi"<esc>lel<cr>
 nmap <leader>< viw<esc>a<<esc>bi><esc>lel<cr>
-nmap <leader>t :enew<cr>
+nmap <leader>t :enew<cr>:edit
 nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
 nmap <leader>c :bd<cr>
