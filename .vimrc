@@ -5,12 +5,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
-"Plugin 'itchyny/lightline.vim'
 Plugin 'ervandew/supertab'
 call vundle#end()
 filetype plugin indent on
 
-" customization
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 colorscheme gruvbox
@@ -32,25 +30,33 @@ set autoindent
 set incsearch
 set hlsearch
 set cindent
-"set foldmethod=indent
 set showtabline=2
+set splitbelow
+set splitright
 
 let mapleader = ","
 let maplocalleader = "\\"
-noremap <esc> :noh<esc><cr>
-noremap <esc><esc> :noh<cr><esc>
-noremap <S-Enter> O<esc><cr>
-noremap <CR> o<esc><cr>
-noremap <leader>ev :vsplit $MYVIMRC<cr>
-nmap <leader>v :source $MYVIMRC<cr>
-nmap <leader>r :vertical resize 80<cr>
-nmap <leader>' viw<esc>a'<esc>bi'<esc>lel<cr>
-nmap <leader>'' viw<esc>a"<esc>bi"<esc>lel<cr>
-nmap <leader>< viw<esc>a<<esc>bi><esc>lel<cr>
-nmap <leader>t :enew<cr>:edit
-nmap <leader>l :bnext<cr>
-nmap <leader>h :bprevious<cr>
-nmap <leader>c :bd<cr>
-nmap <leader>s :w<cr>
-nmap <leader>q :q<cr>
-nmap <leader>m :echo "t = new buffer, l = next buffer, h = previous buffer, c = close buffer, s = save buffer, q = quite vim"<cr>
+"inoremap <Esc> <NOP>
+inoremap <Up> <NOP>
+noremap <Up> <NOP>
+inoremap <Down> <NOP>
+noremap <Down> <NOP>
+inoremap <Left> <NOP>
+noremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap <Right> <NOP>
+inoremap jk <esc>
+inoremap kj <esc>
+inoremap ii <esc>
+nnoremap <leader>b :bprevious<cr>
+nnoremap <leader>n :bnext<cr>
+nnoremap <leader>c :bd<cr><C-W><C-C>
+nnoremap <leader>o :enew<cr>:edit 
+nnoremap <leader>s :w<cr>
+nnoremap <leader>q <C-W><C-O>:qa<cr>
+nnoremap <leader>v :vsplit<cr>
+nnoremap <leader>vf :vsplit 
+nnoremap <leader>h :split<cr>
+nnoremap <leader>hf :split 
+nnoremap <leader>, :source $MYVIMRC<cr>
+inoremap sl; <C-X><C-L>
