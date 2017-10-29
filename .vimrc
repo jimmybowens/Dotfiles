@@ -37,17 +37,17 @@ set splitright
 let mapleader = ","
 let maplocalleader = "\\"
 "inoremap <Esc> <NOP>
-inoremap <Up> <NOP>
+"inoremap <Up> <NOP>
 noremap <Up> <NOP>
-inoremap <Down> <NOP>
+"inoremap <Down> <NOP>
 noremap <Down> <NOP>
-inoremap <Left> <NOP>
+"inoremap <Left> <NOP>
 noremap <Left> <NOP>
-inoremap <Right> <NOP>
+"inoremap <Right> <NOP>
 noremap <Right> <NOP>
-inoremap jk <esc>
-inoremap kj <esc>
-inoremap ii <esc>
+"inoremap jk <esc>
+"inoremap kj <esc>
+"inoremap ii <esc>
 nnoremap <leader>b :bprevious<cr>
 nnoremap <leader>n :bnext<cr>
 nnoremap <leader>c :bd<cr><C-W><C-C>

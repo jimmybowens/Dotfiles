@@ -35,6 +35,9 @@ done
 if [ -d "$HOME/.oh-my-zsh" ];then
   rm -rf "$HOME/.oh-my-zsh"
 fi
+if [ -f "$HOME/.zshrc" ];then
+  rm -f "$HOME/.zshrc"
+fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
@@ -45,10 +48,11 @@ cat << EOF > "$HOME/.zshrc"
 export ZSH=/Users/$(whoami)/.oh-my-zsh
 ZSH_THEME="darkblood"
 plugins=(git)
-source $ZSH/oh-my-zsh.sh
+source \$ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+PATH=/usr/local/bin:$PATH
 EOF
 exit 0
